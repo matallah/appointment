@@ -1,0 +1,22 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+<head>
+    <title th:text="#{clients}"></title>
+</head>
+<body>
+<section layout:fragment="header">
+    <h1 th:text="#{clients}"></h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard" th:text="#{dashboard}"></i></a></li>
+        <li class="active" th:text="#{clients}"></li>
+    </ol>
+</section>
+<div layout:fragment="content">
+    <a href="/clients/add" type="button" class="btn btn-box-tool">Add New Client></a>
+    <a href="/appointment/add" type="button" class="btn btn-box-tool">Add New Appointment</a>
+    <a href="/clients" type="button" class="btn btn-box-tool">View All Clients</a>
+    <a href="/appointment" type="button" class="btn btn-box-tool">View All Appointments</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">SBS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="dist/login/images/fav-icon.png" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" th:href="${bootstrap}"/>
+    <link rel="stylesheet" th:href="@{/dist/lib/jquery.dataTables.min.css}"/>
+    <link rel="stylesheet" th:href="@{/dist/lib/responsive.dataTables.min.css}"/>
+    <script type="text/javascript" th:src="@{/dist/lib/jquery.min.js}"/>
+    <script type="text/javascript" th:src="@{/dist/lib/bootstrap.min.js}"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/bower_components/font-awesome/css/font-awesome.min.css}"/>
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{/bower_components/Ionicons/css/ionicons.min.css}"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/dist/css/AdminLTE.min.css} "/>
+    <link rel="stylesheet" th:href="${pathCSS}"/>
+    <link rel="stylesheet" th:href="@{/dist/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/dist/css/skins/_all-skins.min.css}"/>
+    <!-- Morris chart -->
+    <link rel="stylesheet" th:href="@{/bower_components/morris.js/morris.css}"/>
+    <!-- jvectormap -->
+    <link rel="stylesheet" th:href="@{/bower_components/jvectormap/jquery-jvectormap.css}"/>
+    <!-- Date Picker -->
+    <link rel="stylesheet" th:href="@{/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css}"/>
+    <!--Daterange picker-->
+    <link rel="stylesheet" th:href="@{/bower_components/bootstrap-daterangepicker/daterangepicker.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet"/>
+</head>
+<body class="hold-transition skin-red sidebar-mini">
+<div th:dir="${direction}" class="wrapper" style="font-family: 'El Messiri', sans-serif;">
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header" layout:fragment="header"></section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div th:if="${successFlash != null}" class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <p th:text="${successFlash}"></p>
+            </div>
+
+            <div th:if="${errorFlash != null}" class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <p th:text="${errorFlash}"></p>
+            </div>
+
+            <div th:if="${infoFlash != null}" class="alert alert-info alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <p th:text="${infoFlash}"></p>
+            </div>
+
+            <div layout:fragment="content"></div>
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+<!-- ./wrapper -->
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!--<script type="text/javascript" th:src="@{/webjars/jquery/2.2.4/jquery.min.js}"></script>-->
+<!--<script type="text/javascript" th:src="@{/webjars/jquery-ui/1.12.1/jquery-ui.min.js}"></script>-->
+<!--<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>-->
+<!--<script type="text/javascript" th:src="@{/webjars/datatables/1.10.19/js/jquery.dataTables.min.js}"></script>-->
+<!-- Morris.js charts -->
+<script type="text/javascript" th:src="@{/bower_components/raphael/raphael.min.js}"></script>
+<script type="text/javascript" th:src="@{/bower_components/morris.js/morris.min.js}"></script>
+<script type="text/javascript" th:src="@{/dist/lib/jquery-ui.min.js}"/>
+<script type="text/javascript" th:src="@{/dist/lib/jquery.dataTables.min.js}"/>
+<script type="text/javascript" th:src="@{/dist/lib/dataTables.responsive.min.js}"/>
+<!-- FastClick -->
+<script type="text/javascript" th:src="@{/bower_components/fastclick/lib/fastclick.js}"></script>
+<script th:src="@{/dist/js/app.min.js}"></script>
+<script th:src="@{/dist/js/pages/dashboard.js}"></script>
+<script th:src="@{/dist/js/demo.js}"></script>
+<script th:src="@{/dist/js/datatable.js}"></script>
+
+
+</body>
+</html>

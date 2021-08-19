@@ -1,0 +1,23 @@
+.search {
+    background-image: url('/dist/img/icons8-search-50.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 50px;
+}
+.text {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 100%;
+}
+.tableRTL th {
+    text-align: right;
+}
+.tableLTR th {
+    text-align: left;
+}
+.tableCenter th {
+    text-align: center;
+}
+

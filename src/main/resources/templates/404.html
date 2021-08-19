@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>0hh Website Template | 404Pagefree.com</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/404/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/dist/lib/bootstrap.min.css}"/></head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <div class="logo">
+            <h1><a href="#">Ohh</a></h1>
+        </div>
+    </div>
+    <div class="content">
+        <img th:src="@{/dist/404/images/error-img.png}" title="error"/>
+        <p><span><label>O</label>hh.....</span>You Requested the page that is no longer There.</p>
+        <a href="/">Back To Home</a>
+    </div>
+
+    <div class="container">
+        <h1>Exception</h1>
+        <p>Description:</p>
+        <blockquote>
+            <p th:text="${printException}"></p>
+            <footer>Supported by Developers Team</footer>
+        </blockquote>
+    </div>
+</div>
+</body>
+</html>

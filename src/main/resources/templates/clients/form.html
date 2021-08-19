@@ -1,0 +1,113 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+<head>
+    <title th:text="#{clients}"></title>
+</head>
+<body>
+<section layout:fragment="header">
+    <h1 th:text="#{clients}"></h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard" th:text="#{dashboard}"></i></a></li>
+        <li class="active" th:text="#{clients}"></li>
+    </ol>
+</section>
+<div layout:fragment="content">
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title" th:text="#{form}"></h3>
+            <div class="box-tools pull-right">
+                <a href="/clients" type="button" class="btn btn-box-tool"><i class="fa fa-list-ul"></i></a>
+            </div>
+        </div>
+        <form data-toggle="validator" role="form" th:object="${client}" th:action="@{/clients/save}" method="post">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="firstName" th:text="#{firstName}"></label>
+                            <input required="true" type="text" class="form-control" th:field="*{firstName}"
+                                   id="firstName"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="secondName" th:text="#{secondName}"></label>
+                            <input required="true" type="text" class="form-control" th:field="*{secondName}"
+                                   id="secondName"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="lastName" th:text="#{lastName}"></label>
+                            <input required="true" type="text" class="form-control" th:field="*{lastName}"
+                                   id="lastName"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div hidden="true" class="form-group">
+                        <label for="id">ID</label>
+                        <input readonly="true" type="text" class="form-control" th:field="*{id}" id="id"/>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="email" th:text="#{email}"></label>
+                            <input type="email" class="form-control" th:field="*{email}" id="email"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="phoneNumber" th:text="#{phoneNumber}"></label>
+                            <input type="text" class="form-control" th:field="*{phoneNumber}" id="phoneNumber"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="address" th:text="#{address}"></label>
+                            <input type="text" class="form-control" th:field="*{address}" id="address"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="socialStatus" th:text="#{socialStatus}"></label>
+                            <input type="text" class="form-control"
+                                   th:field="*{socialStatus}" id="socialStatus"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="birthDate" th:text="#{birthDate}"></label>
+                            <input type="date" class="form-control" id="birthDate"
+                                   th:field="*{birthDate}"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="gender" th:text="#{gender}"></label>
+                            <select required="true" id="gender" class="form-control" name="state" th:field="*{gender}">
+                                <option value="" th:text="#{select}"></option>
+                                <option value="MALE" th:text="#{male}"></option>
+                                <option value="FEMALE" th:text="#{female}"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="remarks" th:text="#{remarks}"></label>
+                    <textarea type="text" class="form-control" rows="3" th:field="*{remarks}" id="remarks"/>
+                </div>
+            </div>
+
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary" th:text="#{save}"></button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

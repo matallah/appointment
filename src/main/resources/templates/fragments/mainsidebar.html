@@ -1,0 +1,201 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview">
+            <a href="/"> <i class="fa fa-dashboard"></i> <span th:text="#{dashboard}"></span> </a>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-users"></i><span th:text="#{indexSetup}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/customers"><i class="fa fa-user"></i><span th:text="#{customersAndSuppliers}"></span></a>
+                </li>
+                <li><a href="/clients"><i class="fa fa-street-view"></i><span th:text="#{clients}"></span></a></li>
+                <li><a href="/students"><i class="fa fa-mortar-board"></i><span th:text="#{students}"></span></a></li>
+                <li><a href="/levels"><i class="fa fa-random"></i><span th:text="#{levels}"></span></a></li>
+                <li><a href="/classes"><i class="fa fa-circle-o"></i><span th:text="#{classes}"></span></a></li>
+                <li><a href="/subjects"><i class="fa fa-server"></i><span th:text="#{subjects}"></span></a></li>
+                <li><a href="/expensesType"><i class="fa fa-money"></i><span th:text="#{expensesType}"></span></a></li>
+                <li><a href="/incomingType"><i class="fa fa-money"></i><span th:text="#{incomingType}"></span></a></li>
+                <!--<li><a href="/allowance"><i class="fa fa-money"></i><span th:text="#{allowance}"></span></a></li>-->
+                <!--<li><a href="/deduction"><i class="fa fa-money"></i><span th:text="#{deduction}"></span></a></li>-->
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-video-camera"></i><span th:text="#{transactions}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/payments"><i class="fa fa-check-circle"></i><span th:text="#{payments}"></span></a>
+                </li>
+                <li><a href="/appointment"><i class="fa fa-check-circle"></i><span th:text="#{appointment}"></span></a>
+                </li>
+                <li><a href="/dailyAttendanceStudent"><i class="fa fa-check-circle"></i><span
+                        th:text="#{dailyAttendanceStudent}"></span></a></li>
+                <li><a href="/dailySchedulePerWeek"><i class="fa fa-check-circle"></i><span
+                        th:text="#{dailySchedulePerWeek}"></span></a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-calculator"></i><span th:text="#{dailyVouchers}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/incoming"><i class="fa fa-money"></i><span th:text="#{incoming}"></span></a></li>
+                <li><a href="/expenses"><i class="fa fa-money"></i><span th:text="#{expenses}"></span></a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-thermometer-three-quarters"></i><span th:text="#{evaluation}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/classEvaluation"><i class="fa fa-star-half-full"></i><span
+                        th:text="#{classEvaluation}"></span></a></li>
+                <li><a href="/studentsEvaluation"><i class="fa fa-star-half-full"></i><span
+                        th:text="#{studentsEvaluation}"></span></a></li>
+                <li><a href="/staffEvaluation"><i class="fa fa-star-half-full"></i><span
+                        th:text="#{staffEvaluation}"></span></a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-users"></i><span th:text="#{specialNeeds}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/specialNeedsStudents"><i class="fa fa-users"></i><span th:text="#{students}"></span></a>
+                </li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-mortar-board"></i><span th:text="#{exams}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/exams"><i class="fa fa-star-half-full"></i><span th:text="#{grades}"></span></a></li>
+                <!--<li><a href="/expenses"><i class="fa fa-search"></i><span th:text="#{searchResults}"></span></a></li>-->
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-taxi"></i><span th:text="#{healthInsurance}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/healthInsurance"><i class="fa fa-money"></i><span
+                        th:text="#{registerHealthStatus}"></span></a></li>
+                <!--<li><a href="/expenses"><i class="fa fa-money"></i><span>Review Health Status</span></a></li>-->
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-bus"></i><span th:text="#{transportation}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/drivers"><i class="fa fa-bus"></i><span th:text="#{drivers}"></span></a></li>
+                <li><a href="/buses"><i class="fa fa-bus"></i><span th:text="#{buses}"></span></a></li>
+                <li><a href="/transportation"><i class="fa fa-bus"></i><span th:text="#{registerTransportation}"></span></a>
+                </li>
+                <!--<li><a href="/expenses"><i class="fa fa-search"></i><span>Transportation Review</span></a></li>-->
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-book"></i><span th:text="#{library}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/books"><i class="fa fa-book"></i><span th:text="#{books}"></span></a></li>
+                <li><a href="/library"><i class="fa fa-book"></i><span th:text="#{library}"></span></a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-home"></i><span th:text="#{stores}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/items"><i class="fa fa-home"></i><span th:text="#{items}"></span></a></li>
+                <li><a href="/stores"><i class="fa fa-home"></i><span th:text="#{stores}"></span></a></li>
+                <li><a href="/orderRequest"><i class="fa fa-home"></i><span th:text="#{orderRequest}"></span></a></li>
+                <li><a href="/issueOrder"><i class="fa fa-home"></i><span th:text="#{issueOrder}"></span></a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-file-pdf-o"></i> <span th:text="#{reports}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/reports/students"><i class="fa fa-mortar-board"></i><span
+                        th:text="#{students}"></span></a></li>
+                <li><a href="/reports/students/appointment"><i class="fa fa-mortar-board"></i><span
+                        th:text="#{attendanceOfStudents}"></span></a></li>
+                <li><a href="/reports/incoming"><i class="fa fa-money"></i><span th:text="#{incoming}"></span></a></li>
+                <li><a href="/reports/expenses"><i class="fa fa-money"></i><span th:text="#{expenses}"></span></a></li>
+                <li><a href="/reports/exams"><i class="fa fa-search"></i><span th:text="#{searchResults}"></span></a>
+                </li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-gears"></i> <span th:text="#{settings}"></span>
+                <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/school"><i class="fa fa-money"></i><span th:text="#{schoolInformation}"></span></a></li>
+                <li><a href="/users"><i class="fa fa-money"></i><span th:text="#{users}"></span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/todolist">
+                <i class="fa fa-envelope"></i> <span th:text="#{todolist}"></span>
+                <span class="pull-right-container">
+              <!--<small class="label pull-right bg-yellow">12</small>-->
+                    <!--<small class="label pull-right bg-green">16</small>-->
+              <small class="label pull-right bg-red" th:text="${todolistCount}"></small>
+            </span>
+            </a>
+        </li>
+    </ul>
+
+</section>
+<!-- /.sidebar -->
+</html>
